@@ -1,7 +1,7 @@
 @import "variables.css";
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 img {
