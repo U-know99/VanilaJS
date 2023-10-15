@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Momentum App</title>
+  </head>
+  <body>
+    <div class="top-section">
+      <div class="clock_box">
+        <h1 id="clock" class="clock-text">00:00:00</h1>
+      </div>
+      <div id="weather" class="weather">
+        <!-- 날씨 정보 스타일링이 필요함 -->
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="login-start">
+      <form class="hidden" id="login-form">
+        <input
+          required
+          maxlength="15"
+          type="text"
+          class="input-field"
+          placeholder="What is your name?"
+        />
+
+        <button type="submit" class="send-button">Log In</button>
+      </form>
+    </div>
+    <h1 class="hidden" id="greeting"></h1>
+
+    <div class="main-section">
+      <div class="main-section_box_inner">
+        <div class="main-section_box">
+          <div class="gpt-chat" id="gptApi">
+            <h3 class="main_title">Chat with Your JARVIS</h3>
+            <input
+              type="text"
+              id="promptInput"
+              class="input-field"
+              placeholder="프롬프트 입력"
+            />
+            <button class="send-button" id="generateButton">
+              <i class="fa-regular fa-paper-plane"></i>
+            </button>
+            <img
+              id="loadingImage"
+              src="img/loading.gif"
+              style="display: none"
+              alt="로딩 이미지"
+            />
+            <div id="output"></div>
+          </div>
+        </div>
+      </div>
+      <div class="main-section_box">
+        <div class="main-section_box_inner">
+          <h3 class="main_title">Check my schedule</h3>
+          <form id="todo-form">
+            <input
+              type="text"
+              class="input-field"
+              placeholder="Write a ToDo and Press Enter"
+            />
+            <button class="todo-button">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </form>
+        </div>
+        <ul id="todo-list" class="todo-list">
+          <!-- 클래스 추가 -->
+          <!-- ToDo 아이템 스타일링이 필요함 -->
+        </ul>
+      </div>
+    </div>
+    <div id="quote" class="quote">
+      <!-- 인용구 스타일링이 필요함 -->
+      <span></span>
+
+      <img class="author-image" id="author-image" src="" alt="작가 이미지" />
+      <span></span>
+    </div>
+
+    <script src="js/greetings.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/gptapi.js"></script>
+    <script
+      src="https://kit.fontawesome.com/98d1e0f25e.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
